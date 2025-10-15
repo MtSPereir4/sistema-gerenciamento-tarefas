@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <section id="input-tasks">
+      <div>
+        <input type="text" id="task" placeholder="Adicione uma terefa!" />
+        <button id="btn-add-tasks">Adicionar</button>
+      </div>
+    </section>
+
+    <section id="output-tasks">
+      <div id="box-tasks-to-do">
+        <h2>to do</h2>
+        <ul id="tasks-to-do"></ul>
+      </div>
+
+      <div id="box-tasks-done">
+        <h2>done</h2>
+        <ul id="tasks-done"></ul>
+      </div>
+
+      <div id="box-tasks-canceled">
+        <h2>canceled</h2>
+        <ul id="tasks-canceled"></ul>
+      </div>
+    </section>
+  </body>
+</html>

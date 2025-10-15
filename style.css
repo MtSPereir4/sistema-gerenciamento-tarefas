@@ -1,0 +1,171 @@
+/* CONFIGURAÇÕES GERAIS */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* Seção de input */
+#input-tasks {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+#input-tasks div {
+  display: flex;
+  gap: 10px;
+}
+
+#task {
+  width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#btn-add-tasks {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#btn-add-tasks:hover {
+  background-color: #0056b3;
+}
+
+/* SEÇÃO DE SAÍDA (LISTAS) */
+#output-tasks {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#box-tasks-to-do {
+  background-color: #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+  min-width: 400px;
+}
+
+#box-tasks-done {
+  background-color: #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+  min-width: 400px;
+}
+
+#box-tasks-canceled {
+  background-color: #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+  min-width: 400px;
+}
+
+/*  ITENS DE TAREFA  */
+.task-item-to-do,
+.task-item-done,
+.task-item-canceled {
+  position: relative;
+  list-style: none;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+/* Efeitos visuais de cada tipo */
+.task-item-to-do:hover {
+  background-color: #e9f3ff;
+}
+
+.task-item-done {
+  background-color: #d4edda;
+  text-decoration: line-through;
+}
+
+.task-item-canceled {
+  background-color: #f8d7da;
+  text-decoration: line-through;
+}
+
+/*  OPÇÕES DE TAREFA  */
+.task-options {
+  display: none; /* Escondido por padrão */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 5px;
+}
+
+/* Mostra quando passar o mouse sobre o item */
+.task-item-to-do:hover .task-options,
+.task-item-done:hover .task-options,
+.task-item-canceled:hover .task-options {
+  display: inline-flex;
+}
+
+/* Botões dentro da task */
+.task-options button {
+  border: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  opacity: 0.8;
+}
+
+.task-options button:hover {
+  opacity: 1;
+}
+
+/* Cores específicas dos botões */
+.btn-done {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-remove {
+  background-color: #6c757d;
+  color: white;
+}
